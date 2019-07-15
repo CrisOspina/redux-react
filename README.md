@@ -36,7 +36,7 @@ const store = createStore(
 
 ReactDOM.render(  
   	<Provider store={store}>
-    	<Routes />
+    	  <Routes />
   	</Provider>,
   	document.getElementById('root')
 );
@@ -58,20 +58,20 @@ Ejemplo:
 - **Reducers:**  Las acciones describen que algo pasó, pero no especifican cómo cambió el estado de la aplicación en respuesta. Esto es trabajo de los reducers. Se encargan de reconocer cada cambio que hagamos en las actions para actualizar el componente.
 Ejemplo:
   ```javascript
-	const INITIAL_STATE = {
-		titulo: ''
-	};
+   const INITIAL_STATE = {
+     titulo: ''
+   };
     	
-	export default (state = INITIAL_STATE, action) => {
-		switch (action.type) {
-			case CAMBIO_TITULO:
-				return {
-					...state,
-					titulo: action.payload
-				}
-			default: return state;
-			}
-	}
+   export default (state = INITIAL_STATE, action) => {
+     switch (action.type) {
+       case CAMBIO_TITULO:
+         return {
+	   ...state,
+	   titulo: action.payload
+	 }
+	default: return state;
+     }
+   }
 
 - **Componentes (JSX):** Fusión de HTML y JS que nos permite crear componentes reautilizables para las aplicaciones. *"Interfaz"*.
 Ejemplo:
@@ -79,13 +79,13 @@ Ejemplo:
   ```javascript
   import React from 'react';
   const Error = (props) => {
-  	return (
-   	 <React.Fragment>
-    	  <h2 className="container">{ props.mensaje }</h2>
-   	 </React.Fragment>
- 	 );
-	} 
-	export default Error;
+    return (
+      <React.Fragment>
+        <h2 className="container">{ props.mensaje }</h2>
+      </React.Fragment>
+     );
+   } 
+   export default Error;
 
  ## El mundo redux se resume en el siguiente ciclo:
  ![2](https://user-images.githubusercontent.com/38017835/61195708-6fef5200-a68f-11e9-9ea2-6893f5875cfd.PNG)
