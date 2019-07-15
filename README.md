@@ -47,31 +47,31 @@ ReactDOM.render(
 - **Actions:** Las acciones son un bloque de información que envia datos desde la aplicación a tu store.  Normalmente son promesas. *"Son la única fuente de información para el store"*.
 Ejemplo:
    ```javascript
-    	export const cambioTitulo = (titulo) => (dispatch) => {
-    	      dispatch({
-    	       	 type: CAMBIO_TITULO,
-    	       	 payload: titulo
-    	      	 })
-    	    }
+  export const cambioTitulo = (titulo) => (dispatch) => {
+  	dispatch({
+    	type: CAMBIO_TITULO,
+    	payload: titulo
+    })
+  }
 
 
 - **Reducers:**  Las acciones describen que algo pasó, pero no especifican cómo cambió el estado de la aplicación en respuesta. Esto es trabajo de los reducers. Se encargan de reconocer cada cambio que hagamos en las actions para actualizar el componente.
 Ejemplo:
   ```javascript
-    	const INITIAL_STATE = {
-    	  titulo: ''
-    	};
+	const INITIAL_STATE = {
+		titulo: ''
+	};
     	
-    	export default (state = INITIAL_STATE, action) => {
-    	  switch (action.type) {
-    	    case CAMBIO_TITULO:
-    	        return {
-    	          ...state,
-    		        titulo: action.payload
-    	        }
-    	    default: return state;
-    	 	 }
-    	}
+	export default (state = INITIAL_STATE, action) => {
+		switch (action.type) {
+			case CAMBIO_TITULO:
+				return {
+					...state,
+					titulo: action.payload
+				}
+			default: return state;
+			}
+	}
 
 - **Componentes (JSX):** Fusión de HTML y JS que nos permite crear componentes reautilizables para las aplicaciones. *"Interfaz"*.
 Ejemplo:
