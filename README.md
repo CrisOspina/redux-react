@@ -1,3 +1,7 @@
+App realizada en el curso: https://blog-redux.now.sh/
+
+Herramientas - [React](https://es.reactjs.org/), [React-Router](https://reacttraining.com/react-router/web/guides/quick-start), [Redux](https://es.redux.js.org/), [jsonPlaceholder.](https://jsonplaceholder.typicode.com/)
+
 ### ¿Qúe es Redux?
 Es una herramienta de uso libre que nos permite manipular todo el estado de nuestra aplicación en un solo lugar (store).
 "Redux es un contenedor predecible del estado de aplicaciones JavaScript".
